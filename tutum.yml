@@ -1,0 +1,15 @@
+web:
+  image: alexcheng/magento
+  links: 
+   - db
+  ports:
+   - "80:80"
+db:
+  image: mysql:5.6.23
+  ports:
+   - "3306:3306"
+  environment:
+    MYSQL_DATABASE: "magento"
+    MYSQL_USER: "magento"
+    MYSQL_PASSWORD: "54walii"
+    MYSQL_ROOT_PASSWORD: "54walii"
